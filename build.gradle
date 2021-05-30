@@ -13,8 +13,14 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.10.0'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.1.0'
+	implementation 'org.apache.camel.springboot:camel-servlet-starter:3.1.0'
+	implementation 'org.apache.camel.springboot:camel-http-starter:3.1.0'
+
+	implementation 'org.apache.camel:camel-rest:3.1.0'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
 test {
