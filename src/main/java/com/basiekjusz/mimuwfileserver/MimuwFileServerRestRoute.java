@@ -11,7 +11,6 @@ public class MimuwFileServerRestRoute extends RouteBuilder {
   public void configure() throws Exception {
     restConfiguration().component("servlet");
 
-    rest("/get-file/").get("/{file}").produces("application/octet-stream").route().process(new MimuwFileServerLogger()).process(new MimuwFileServerProcessor()).transform().simple("${body}"); 
-    from("direct:log").process(new MimuwFileServerLogger()).log("Witam");
+    rest("/").get("/{file}").produces("application/octet-stream").route().process(new MimuwFileServerLogger()).process(new MimuwFileServerProcessor()).transform().simple("${body}"); 
   }
 }
